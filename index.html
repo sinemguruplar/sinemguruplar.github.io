@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Sinem's Website</title>
-</head>
-<body>
-  <h1>Hello, I’m Sinem 👋</h1>
-  <p>This is my first website on GitHub.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinem's Website</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Hello, I’m Sinem 👋</h1>
+
+      <p>
+        This is my first website on GitHub Pages.  
+        Next, I’ll add a small game and start learning Python step-by-step.
+      </p>
+
+      <a
+        href="https://github.com/sinemguruplar"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Visit my GitHub
+      </a>
+
+      <button id="colorBtn">🎨 Change vibe</button>
+    </div>
+
+    <script>
+      const vibes = [
+        ["#0b1020", "#2a3cff", "#ff2aa5"],
+        ["#0a1a14", "#00ffb3", "#00a3ff"],
+        ["#1b0b20", "#b400ff", "#ffb005"],
+      ];
+
+      const btn = document.getElementById("colorBtn");
+
+      btn.addEventListener("click", () => {
+        const [a, b, c] = vibes[Math.floor(Math.random() * vibes.length)];
+
+        document.body.style.background = `
+          radial-gradient(900px 600px at 20% 10%, ${b}, transparent 60%),
+          radial-gradient(900px 600px at 80% 20%, ${c}, transparent 60%),
+          ${a}
+        `;
+      });
+    </script>
+  </body>
 </html>
