@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinem’s Spark Game</title>
+    <link rel="stylesheet" href="game.css" />
+    <script src="game.js" defer></script>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <header class="top">
+        <h1>⚡ Catch the Spark</h1>
+        <p>Click the spark as many times as you can in <b>15</b> seconds.</p>
+      </header>
+
+      <section class="hud">
+        <div class="pill">Score: <span id="score">0</span></div>
+        <div class="pill">Time: <span id="time">15</span>s</div>
+        <button id="startBtn" class="btn">Start</button>
+      </section>
+
+      <section class="arena" id="arena" aria-label="game arena">
+        <button id="spark" aria-label="spark" title="Click me!">✨</button>
+      </section>
+
+      <footer class="foot">
+        <a href="../index.html">← Back to homepage</a>
+      </footer>
+    </main>
+  </body>
+</html>
